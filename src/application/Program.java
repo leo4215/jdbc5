@@ -15,10 +15,10 @@ public class Program {
         try {
             conn = DB.getConnection();
 
-            st = conn.prepareStatement(
-                            "DELETE FROM department "
-                            + "WHERE "
-                            + "Id = ?");
+            st = conn.prepareStatement("""
+                            DELETE FROM department
+                            WHERE Id = ?
+                            """);
 
             st.setInt(1, 2);
 
